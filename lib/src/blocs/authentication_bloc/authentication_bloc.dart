@@ -18,14 +18,21 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState> 
   Stream<AuthenticationState> mapEventToState(
     AuthenticationEvent event,
   ) async* {
+    if(event is AppFirstStarted){
+      yield AuthenticationUninitialized();
+    }
     if (event is AppStarted) {
       final bool hasToken = await userRepository.hasToken();
 
       if (hasToken) {
         yield AuthenticationAuthenticated();
-      } else {
-        yield AuthenticationUninitialized();
       }
+      else {
+        yield AuthenticationInitialized();
+      }
+    }
+    if(event is NavigateLoggedIn){
+      yield  AuthenticationUnauthenticated();
     }
 
     if (event is LoggedIn) {

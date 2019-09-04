@@ -10,6 +10,10 @@ class AuthenticationUninitialized extends AuthenticationState {
   @override
   String toString() => 'AuthenticationUninitialized';
 }
+class AuthenticationInitialized extends AuthenticationState {
+  @override
+  String toString() => 'AuthenticationInitialized';
+}
 
 class AuthenticationAuthenticated extends AuthenticationState {
   @override

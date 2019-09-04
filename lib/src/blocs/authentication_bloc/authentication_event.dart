@@ -6,9 +6,17 @@ abstract class AuthenticationEvent extends Equatable {
   AuthenticationEvent([List props = const <dynamic>[]]) : super(props);
 }
 
+class AppFirstStarted extends AuthenticationEvent {
+  @override
+  String toString() => 'AppFirstStarted';
+}
 class AppStarted extends AuthenticationEvent {
   @override
   String toString() => 'AppStarted';
+}
+class NavigateLoggedIn extends AuthenticationEvent {
+  @override
+  String toString() => 'NavigateLoggedIn';
 }
 
 class LoggedIn extends AuthenticationEvent {

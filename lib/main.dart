@@ -12,7 +12,7 @@ void main() {
   runApp(BlocProvider<AuthenticationBloc>(
     builder: (context) {
       return AuthenticationBloc(userRepository: userRepository)
-        ..dispatch(AppStarted());
+        ..dispatch(AppFirstStarted());
     },
     child: App(
       userRepository: userRepository,

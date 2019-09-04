@@ -18,6 +18,9 @@ class HomePage extends StatelessWidget {
               child: Text('logout'),
               onPressed: () {
                 authenticationBloc.dispatch(LoggedOut());
+//                if(Navigator.canPop(context)){
+//                  Navigator.pop(context);
+//                }
               },
             )),
       ),

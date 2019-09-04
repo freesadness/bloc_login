@@ -45,7 +45,7 @@ class App extends StatelessWidget {
             }
             if (state is AuthenticationLoading) {
               return LoadingIndicator();
-            } throw Exception('No state in App');
+            } throw Exception('No Authentication state setup');
           },
         ),
     );

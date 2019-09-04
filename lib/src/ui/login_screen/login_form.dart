@@ -1,10 +1,6 @@
-import 'package:dongey/src/blocs/authentication_bloc/authentication_bloc.dart';
-import 'package:dongey/src/blocs/authentication_bloc/authentication_state.dart';
-import 'package:dongey/src/blocs/login_bloc/bloc.dart';
-import 'package:dongey/src/resources/user_repository.dart';
-import 'package:dongey/src/ui/home_screen/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../blocs/login_bloc/bloc.dart';
 
 class LoginForm extends StatefulWidget {
   @override

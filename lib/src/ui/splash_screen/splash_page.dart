@@ -1,10 +1,6 @@
-import 'dart:async';
-
-import 'package:dongey/src/blocs/authentication_bloc/bloc.dart';
-import 'package:dongey/src/resources/user_repository.dart';
-import 'package:dongey/src/ui/login_screen/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../blocs/authentication_bloc/bloc.dart';
 
 class SplashPage extends StatelessWidget {
   @override

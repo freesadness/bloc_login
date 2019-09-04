@@ -1,4 +1,4 @@
-import 'package:dongey/src/blocs/authentication_bloc/bloc.dart';
+import '../../blocs/authentication_bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

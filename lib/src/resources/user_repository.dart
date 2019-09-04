@@ -1,8 +1,6 @@
-import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import '../app.dart';
 import 'dongey_api_provider.dart';
-import 'package:http/http.dart' as http;
-import 'package:flutter/foundation.dart';
 import '../models/jwt_request.dart';
 
 

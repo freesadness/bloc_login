@@ -10,7 +10,7 @@ class AppStarted extends AuthenticationEvent {
   @override
   String toString() => 'AppStarted';
 }
-class NavigateLoggedIn extends AuthenticationEvent {
+class NavigateToLoginPageButtonOnPressed extends AuthenticationEvent {
   @override
   String toString() => 'NavigateLoggedIn';
 }

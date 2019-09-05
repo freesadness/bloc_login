@@ -16,7 +16,7 @@ class SplashPage extends StatelessWidget {
             Center(child: Text('Splash Screen')),
             FlatButton(
                 onPressed: (){
-                  authenticationBloc.dispatch(NavigateLoggedIn());
+                  authenticationBloc.dispatch(NavigateToLoginPageButtonOnPressed());
                 },
                 child: Text('login'))
           ],

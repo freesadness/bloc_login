@@ -28,7 +28,7 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState> 
         yield AuthenticationInitialized();
       }
     }
-    if(event is NavigateLoggedIn){
+    if(event is NavigateToLoginPageButtonOnPressed){
       yield  AuthenticationUnauthenticated();
     }
 

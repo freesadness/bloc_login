@@ -1,3 +1,4 @@
+import 'package:dongey/src/ui/loading_screen/loading_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -32,7 +33,7 @@ class App extends StatelessWidget {
       home:
          BlocBuilder<AuthenticationBloc, AuthenticationState>(
           builder: (context, state) {
-            if (state is AuthenticationUninitialized) {
+            if (state is AuthenticationInitialized) {
               return SplashPage();
             }
             if (state is AuthenticationAuthenticated) {
@@ -42,7 +43,7 @@ class App extends StatelessWidget {
               return LoginPage(userRepository: userRepository);
             }
             if (state is AuthenticationLoading) {
-              return LoadingIndicator();
+              return LoadingPage();
             } throw Exception('No Authentication state setup');
           },
         ),

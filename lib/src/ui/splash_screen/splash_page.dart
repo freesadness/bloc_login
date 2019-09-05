@@ -17,9 +17,6 @@ class SplashPage extends StatelessWidget {
             FlatButton(
                 onPressed: (){
                   authenticationBloc.dispatch(NavigateLoggedIn());
-//                  Navigator.push(context, MaterialPageRoute(
-//                      builder: (BuildContext context)=>LoginPage(userRepository: UserRepository())
-//                  ));
                 },
                 child: Text('login'))
           ],

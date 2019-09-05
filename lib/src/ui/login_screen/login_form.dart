@@ -39,12 +39,6 @@ class _LoginFormState extends State<LoginForm> {
             BuildContext context,
             LoginState state,
             ) {
-          if(state is LoginInitial){
-//            AuthenticationBloc(userRepository: UserRepository()).dispatch(AuthenticationAuthenticated());
-////            Navigator.pop(context, MaterialPageRoute(
-////                builder: (BuildContext context)=>HomePage()
-////                ));
-          }
           return Form(
             child: Column(
               children: [

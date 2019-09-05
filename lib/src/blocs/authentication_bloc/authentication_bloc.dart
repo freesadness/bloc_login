@@ -12,21 +12,15 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState> 
       : assert(userRepository != null);
 
   @override
-  AuthenticationState get initialState => AuthenticationUninitialized();
+  AuthenticationState get initialState => AuthenticationUnauthenticated();
 
   @override
   Stream<AuthenticationState> mapEventToState(
     AuthenticationEvent event,
   ) async* {
-    final bool hasToken = await userRepository.hasToken();
-    if(event is AppFirstStarted){
-      if (hasToken) {
-        yield AuthenticationAuthenticated();
-      }else{
-        yield AuthenticationUninitialized();
-      }
-    }
     if (event is AppStarted) {
+      yield AuthenticationLoading();
+      final bool hasToken = await userRepository.hasToken();
       if (hasToken) {
         yield AuthenticationAuthenticated();
       }
